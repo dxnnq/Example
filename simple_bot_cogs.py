@@ -20,3 +20,12 @@ async def setup(bot):
   await bot.add_cog(Config(bot))
 
 #In your main file it should be
+    
+    async def setup_hook(self):
+        print(f"Logged in as {bot.user}")
+        cogs_folder = f"{os.path.abspath(os.path.dirname(__file__))}/cogs"
+        for filename in os.listdir(cogs_folder):
+           if filename.endswith(".py"):
+            await bot.load_extension(f"cogs.{filename[:-3]}")
+        await bot.tree.sync(guild=discord.Object(id=YOUR_GUILD_ID) #Remove the guild since this is a global command
+        print("Cogs Loaded")
