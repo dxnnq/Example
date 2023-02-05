@@ -29,7 +29,7 @@ async def hi(ctx: commands.Context, name: str = None):
 @bot.tree.command(description="Say hello!", guild=discord.Object(id=YOUR_GUILD_ID) #Remove the guild part if its global
 async def hello(interaction: discord.Interaction, name: str = None):
    name = name or interaction.user.name
-   await interaction.response.send_message(f"Hello! {name}") #If you want the message to be hidden to just the user pass in an ephemeral (f"Hello!", ephemeral=True)
+   await interaction.response.send_message(f"Hello! {name}") #If you want the message to be hidden to just the command author pass in an ephemeral (f"Hello!", ephemeral=True)
 
                   
 bot.run(TOKEN)
