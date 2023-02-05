@@ -15,7 +15,8 @@ class simple_bot_cogs(commands.Cog):
     async def hello(self, interaction: discord.Interaction, name: str = None):
         name = name or interaction.user.name
         await interaction.response.send_message(f"Hello! {name}")
-        
-           
+            
 async def setup(bot):
   await bot.add_cog(Config(bot))
+
+#In your main file it should be
