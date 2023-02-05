@@ -14,12 +14,7 @@ class Bot(commands.Bot):
 )
     async def setup_hook(self):
         print(f"Logged in as {bot.user}")
-        cogs_folder = f"{os.path.abspath(os.path.dirname(__file__))}/cogs"
-        for filename in os.listdir(cogs_folder):
-            if filename.endswith(".py"):
-                await bot.load_extension(f"cogs.{filename[:-3]}")
         await bot.tree.sync(guild=discord.Object(id=YOUR_GUILD_ID) #Remove the guild part if you want it to be global
-        print("Cogs Loaded")
          
 @bot.command()
 async def hi(ctx: commands.Context, name: str = None):
