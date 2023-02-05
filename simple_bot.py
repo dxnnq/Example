@@ -8,7 +8,7 @@ with open("config.json") as t:
 class Bot(commands.Bot):
     def __init__(self):
         super().__init__(
-            command_prefix = commands.when_mentioned_or("!"),
+            command_prefix = commands.when_mentioned_or("!"), #Whatever you want your prefix to be
             intents = discord.Intents.all(),
             help_command = None #Disabling the base help command
 )
