@@ -23,7 +23,7 @@ async def setup(bot):
     
     async def setup_hook(self):
         print(f"Logged in as {bot.user}")
-        cogs_folder = f"{os.path.abspath(os.path.dirname(__file__))}/cogs"
+        cogs_folder = f"{os.path.abspath(os.path.dirname(__file__))}/cogs" #Make a folder named cogs and put your commands in there
         for filename in os.listdir(cogs_folder):
            if filename.endswith(".py"):
             await bot.load_extension(f"cogs.{filename[:-3]}")
