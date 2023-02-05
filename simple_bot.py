@@ -1,4 +1,4 @@
-import discord, os, datetime, json, aiosqlite, asyncio, aiohttp
+import discord, os, json
 from discord.ext import commands
 
 with open("config.json") as t:
