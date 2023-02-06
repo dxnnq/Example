@@ -17,7 +17,7 @@ class simple_bot_cogs(commands.Cog):
         await interaction.response.send_message(f"Hello! {name}")
             
 async def setup(bot):
-  await bot.add_cog(Config(bot))
+  await bot.add_cog(simple_bot_cogs(bot))
 
 #In your main file it should be
     
