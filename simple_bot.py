@@ -1,4 +1,4 @@
-import discord, os, json
+import discord, json
 from discord.ext import commands
 
 with open("config.json") as t: #Make a new file called "config.json"
