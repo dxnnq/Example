@@ -30,5 +30,3 @@ async def setup(bot):
         await bot.tree.sync(guild=discord.Object(id=YOUR_GUILD_ID) #Remove the guild since this is a global command
         print("Cogs Loaded")
                             
-                            
-                            
